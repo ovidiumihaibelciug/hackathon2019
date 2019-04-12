@@ -1,0 +1,9 @@
+type Post {
+  _id: ID!
+  title: String,
+  description: String,
+  tags: [String],
+  createdAt: Date,
+  userId: ID!,
+  user: User,
+}

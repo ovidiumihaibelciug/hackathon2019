@@ -1,0 +1,83 @@
+.o-header {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 40px;
+	z-index: 5;
+	.left-side {
+		display: flex;
+		flex: 1;
+		.icon {
+			padding: 0 10px;
+			font-size: 2rem;
+			color: #474D5B;
+			&:hover {
+				color: $o-color-main;
+				cursor: pointer;
+			}
+			&.disabled {
+				color: #fff;
+				cursor: not-allowed;
+			}
+		}
+	}
+	.right-side {
+		display: flex;
+		position: fixed;
+		// top: 0;
+		right: 0;	
+		justify-content: space-between;
+		align-items: center;
+		z-index: 5;
+		width: 270px;
+		.icon {
+			font-size: 1.8rem;
+			flex: 2;
+			color: #898c92;
+			cursor: pointer;
+			position: relative;
+			&.on::before {
+				content: "";
+				position: absolute;
+				left: 8px;
+				top: -5px;	
+				height: 14px;
+				width: 14px;
+				background-color: $o-color-main;
+				border: 3px solid $o-color-bg;
+				border-radius: 100%;
+			}
+			&.options {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-bottom: 10px;
+				font-size: 2rem;
+			}
+		}
+		.user-profile {
+			flex: 7;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			margin-top: -10px;
+			&--img {
+				height: 50px;
+				width: 50px;
+				border-radius: 100%;
+				background-size: cover;
+				background-position: center center;
+			}
+			&--username {
+				font-size: 1.2rem;
+				padding-left: 15px;
+				color: white;
+				font-family: Roboto;
+				font-weight: 800;
+				letter-spacing: 1.5px;
+			}
+		}
+		.options {
+			flex: 1;
+		}
+	}
+}

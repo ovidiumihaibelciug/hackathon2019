@@ -1,0 +1,11 @@
+type User {
+  _id: ID!
+  emails: JSON
+  name: String
+  profile: Profile,
+  posts: [Post]
+}
+
+type Profile {
+  name: String
+}
