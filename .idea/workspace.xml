@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ab4fc50d-544b-40a6-a18e-b8df20f2a140" name="Default Changelist" comment="boilerplate">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.meteor/packages" beforeDir="false" afterPath="$PROJECT_DIR$/.meteor/packages" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.meteor/versions" beforeDir="false" afterPath="$PROJECT_DIR$/.meteor/versions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/styles/elements/_grid.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/elements/_grid.scss" afterDir="false" />
-    </list>
+    <list default="true" id="ab4fc50d-544b-40a6-a18e-b8df20f2a140" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -21,15 +15,6 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/imports/graphql/entities/index.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="161">
-                  <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/imports/graphql/index.js">
               <provider selected="true" editor-type-id="text-editor">
@@ -87,11 +72,20 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/client/styles/elements/_grid.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="14739">
-                  <caret line="739" selection-start-line="739" selection-end-line="739" />
+                <state relative-caret-position="414">
+                  <caret line="735" column="1" lean-forward="true" selection-start-line="735" selection-start-column="1" selection-end-line="735" selection-end-column="1" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/client/styles/base/_normalize.scss">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="207">
+                  <caret line="33" column="6" lean-forward="true" selection-end-line="446" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
@@ -173,7 +167,7 @@
               <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
                 <state split_layout="SPLIT">
                   <first_editor>
-                    <caret column="14" selection-start-column="14" selection-end-column="14" />
+                    <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
                   </first_editor>
                   <second_editor />
                 </state>
@@ -324,15 +318,7 @@
             <path>
               <item name="passive-income-anime" type="b2602c69:ProjectViewProjectNode" />
               <item name="passive-income-anime" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="passive-income-anime" type="b2602c69:ProjectViewProjectNode" />
-              <item name="passive-income-anime" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
-              <item name="elements" type="462c0819:PsiDirectoryNode" />
+              <item name="imports" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -387,7 +373,7 @@
       <workItem from="1554990625285" duration="2852000" />
       <workItem from="1554994108745" duration="2659000" />
       <workItem from="1555008781252" duration="12254000" />
-      <workItem from="1555138163131" duration="21000" />
+      <workItem from="1555138163131" duration="2578000" />
     </task>
     <task id="LOCAL-00001" summary="added sass">
       <created>1554911931301</created>
@@ -438,17 +424,24 @@
       <option name="project" value="LOCAL" />
       <updated>1555072575622</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="boilerplate">
+      <created>1555138284572</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1555138284572</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33125000" />
+    <option name="totallyTimeSpent" value="35682000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13497268" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21366121" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -521,16 +514,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="boilerplate" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/pages/_main/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="23" column="15" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/pages/Posts/Post/Post.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -780,16 +763,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor>
-            <caret column="14" selection-start-column="14" selection-end-column="14" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/pages/Login.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="389">
@@ -797,10 +770,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor>
+            <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/styles/elements/_grid.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14739">
-          <caret line="739" selection-start-line="739" selection-end-line="739" />
+        <state relative-caret-position="414">
+          <caret line="735" column="1" lean-forward="true" selection-start-line="735" selection-start-column="1" selection-end-line="735" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/styles/base/_normalize.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="33" column="6" lean-forward="true" selection-end-line="446" selection-end-column="1" />
         </state>
       </provider>
     </entry>
