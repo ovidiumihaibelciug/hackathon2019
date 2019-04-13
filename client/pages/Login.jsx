@@ -41,6 +41,7 @@ class Login extends React.Component {
           <ErrorField name="email" />
           <ErrorField name="password" />
         </AutoForm>
+        <i className="fa fa-home"></i>
       </div>
     )
   }
