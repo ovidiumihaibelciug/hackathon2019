@@ -94,3 +94,15 @@
     }
   }
 }
+
+.complete-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  &__box {
+    height: auto;
+    width: 500px;
+  }
+}

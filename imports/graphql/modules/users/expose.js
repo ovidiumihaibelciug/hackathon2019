@@ -8,7 +8,7 @@ expose({
       return db.users;
     },
     update({ userId }) {
-      Security.checkStaff(userId);
+
     },
     insert({ userId }) {
       Security.checkStaff(userId);

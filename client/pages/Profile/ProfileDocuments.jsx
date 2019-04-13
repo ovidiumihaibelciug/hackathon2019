@@ -6,6 +6,7 @@ import {Button} from 'antd';
 import Navbar from "../../components/Navbar";
 import SecondaryNav from "../../components/Profile/SecondaryNav";
 import Loading from '../../components/Loading'
+import DocumentsBox from "../../components/Documents/DocumentsBox";
 
 export class Profile extends Component {
 
@@ -54,7 +55,6 @@ export class Profile extends Component {
     const { user, loading } = this.state;
     const id = this.props.match.params.id || Meteor.userId() ;
     let img = 'https://i.imgur.com/GcP71BP.png';
-    let bio = ' Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita rem, soluta temporibus veniam obcaecati voluptatum voluptas iusto deserunt, quae molestias minus natus recusandae quos facilis et eaque ad non! Quidem voluptate ducimus molestiae nostrum at error quo reprehenderit laborum quae! ';
 
     if (loading) {
       return <Loading />
@@ -81,10 +81,7 @@ export class Profile extends Component {
               </div>
             </div>
             <div className="profile-body__rightside">
-              <ActivityBox/>
-              <ActivityBox/>
-              <ActivityBox/>
-              <ActivityBox/>
+              <DocumentsBox />
             </div>
           </div>
         </div>

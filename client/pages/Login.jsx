@@ -16,7 +16,7 @@ class Login extends React.Component {
 
     try {
       await loginWithPassword({ email, password }, apollo);
-      history.push('/dashboard');
+      history.push('/');
       notification.open({
         message: 'Log in successful',
       })

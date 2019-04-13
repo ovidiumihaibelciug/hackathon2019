@@ -19,8 +19,13 @@ class Register extends React.Component {
     let userRole = role === false || role === undefined || role === 0 ? 'STUDENT' : "SECRETAR";
 
     try {
-      await createUser({ email, password,  profile: { name, role: userRole} }, apollo);
-      history.push('/dashboard');
+      const id = await createUser({ email, password,  profile: { name, role: userRole} }, apollo);
+
+      if (userRole === 'STUDENT') {
+        history.push(`/complete-info/${id}`);
+      }  else if (userRole === 'SECRETAR') {
+        history.push('/dashboard');
+      }
       notification.open({
         message: 'Log in successful',
       })

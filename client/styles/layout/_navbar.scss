@@ -59,3 +59,45 @@
     }
   }
 }
+
+.secondary__navbar {
+  height: 70px;
+  width: 100%;
+  padding: 0 5%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  &__leftside {
+    flex: 2;
+  }
+  &__rightside {
+    flex: 5;
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+  &__item {
+    margin: 0  20px;
+    border-bottom: 2px solid transparent;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: all .3s ease-in-out;
+    a {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      color: black;
+      font-size: 1.8rem;
+      transition: all .3s ease-in-out;
+
+    }
+    &--active {
+      height: 100%;
+      color: $color-main !important;
+      font-weight: bold;
+      border-bottom: 2px solid $color-main;
+      transition: all .3s ease-in-out;
+    }
+  }
+}

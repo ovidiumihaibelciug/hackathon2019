@@ -4,4 +4,7 @@ type Document {
     type: String
     pdf: String
     createdAt: String
+    userId: ID,
+    user: User,
 }
+

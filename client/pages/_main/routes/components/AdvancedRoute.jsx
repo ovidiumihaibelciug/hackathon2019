@@ -20,10 +20,19 @@ class AdvancedRoute extends Component {
       navbar,
       breadcrumb,
       userId,
-      onlyCompany,
-      onlyFreelancer,
+      onlyStudent,
+      onlySecretar,
       ...rest
     } = this.props;
+
+    if (onlyStudent && !Roles.userIsInRole(userId, 'STUDENT')) {
+      return <Redirect to={'/'} />;
+    }
+
+    if (onlySecretar && !Roles.userIsInRole(userId, 'SECRETAR')) {
+      return <Redirect to={'/'} />;
+    }
+
     if (auth && !userId) {
       return <Redirect to={'/login'} />;
     }

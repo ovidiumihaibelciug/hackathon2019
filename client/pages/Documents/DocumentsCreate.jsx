@@ -9,6 +9,7 @@ import { convertToRaw, EditorState, ContentState, convertFromHTML } from 'draft-
 import draftToHtml from 'draftjs-to-html';
 import Navbar from "../../components/Navbar";
 import Wrapper from "../../components/Wrapper";
+import { proces_verbal } from '../../utils';
 
 
 
@@ -23,8 +24,6 @@ class PostCreate extends Component {
   onSubmit = async data => {
     const {editorState, type} = this.state;
     const rawContentState = convertToRaw(editorState.getCurrentContent());
-
-
 
     const markup = draftToHtml(
       rawContentState
@@ -69,11 +68,12 @@ class PostCreate extends Component {
   };
 
   handleType = (id) => {
+    const content = id === 1 ? proces_verbal : 'Nu merge.';
     this.setState({
       type: id,
       editorState: EditorState.createWithContent(
         ContentState.createFromBlockArray(
-          convertFromHTML('<p>Merge.</p>')
+          convertFromHTML(`<p>${content}</p>`)
         )
       )
     });

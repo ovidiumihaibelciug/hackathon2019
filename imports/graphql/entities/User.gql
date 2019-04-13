@@ -2,8 +2,11 @@ type User {
   _id: ID!
   emails: JSON
   name: String
+  createdAt: String
+  roles: [String]
   profile: Profile,
-  posts: [Post]
+  services: PasswordType
+  documents: [Document]
 }
 
 input CreateUserProfileInput {
@@ -11,7 +14,18 @@ input CreateUserProfileInput {
   role: String
 }
 
+type PasswordType {
+    password: Bcrypt
+}
+
+type Bcrypt {
+    bcrypt: String
+}
+
 type Profile {
   name: String
   role: String
+  classNumber: String
+  classLetter: String,
+  classTeacher: String
 }

@@ -18,3 +18,13 @@
     transform: rotate(360deg);
   }
 }
+
+
+.loader-container {
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

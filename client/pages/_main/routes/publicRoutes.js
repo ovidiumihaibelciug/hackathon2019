@@ -6,16 +6,17 @@ import Register from '../../Register';
 import PostList from '../../Posts/PostList';
 import Dashboard from '../../Dashboard/Dashboard';
 import Profile from "../../Profile/Profile";
+import ProfileDocuments from "../../Profile/ProfileDocuments";
 import Users from "../../Users/Users";
 import Supplies from "../../Supplies";
 import Documents from "../../Documents/Documents";
 import DocumentsCreate from "../../Documents/DocumentsCreate";
+import CompleteInfo from "../../CompleteInfo";
 
 export default [
   {
     path: '/login',
     component: Login,
-    onlyPublic: true,
   },
   {
     path: '/register',
@@ -29,14 +30,30 @@ export default [
   {
     path: '/dashboard',
     component: Dashboard,
+    onlySecretar: 1,
   },
   {
     path: '/profile',
+    component: Profile,
+    onlyStudent: 1,
+  },
+  {
+    path: '/profile/documents',
+    component: ProfileDocuments,
+    onlyStudent: 1,
+  },
+  {
+    path: '/profile/:id/documents',
+    component: ProfileDocuments,
+  },
+  {
+    path: '/profile/:id',
     component: Profile,
   },
   {
     path: '/users',
     component: Users,
+    onlySecretar: 1,
   },
   {
     path: '/supplies',
@@ -49,5 +66,9 @@ export default [
   {
     path: '/documents/create',
     component: DocumentsCreate,
+  },
+  {
+    path: '/complete-info/:id',
+    component: CompleteInfo,
   },
 ];
