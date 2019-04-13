@@ -1,0 +1,7 @@
+type Document {
+    _id: ID!
+    name: String
+    type: String
+    pdf: String
+    createdAt: String
+}

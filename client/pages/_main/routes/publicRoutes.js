@@ -7,6 +7,9 @@ import PostList from '../../Posts/PostList';
 import Dashboard from '../../Dashboard/Dashboard';
 import Profile from "../../Profile/Profile";
 import Users from "../../Users/Users";
+import Supplies from "../../Supplies";
+import Documents from "../../Documents/Documents";
+import DocumentsCreate from "../../Documents/DocumentsCreate";
 
 export default [
   {
@@ -34,5 +37,17 @@ export default [
   {
     path: '/users',
     component: Users,
+  },
+  {
+    path: '/supplies',
+    component: Supplies,
+  },
+  {
+    path: '/documents',
+    component: Documents,
+  },
+  {
+    path: '/documents/create',
+    component: DocumentsCreate,
   },
 ];
