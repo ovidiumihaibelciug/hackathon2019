@@ -4,7 +4,9 @@
 import Login from '../../Login';
 import Register from '../../Register';
 import PostList from '../../Posts/PostList';
-import PostCreate from '../../Posts/PostCreate';
+import Dashboard from '../../Dashboard/Dashboard';
+import Profile from "../../Profile/Profile";
+import Users from "../../Users/Users";
 
 export default [
   {
@@ -22,7 +24,15 @@ export default [
     component: PostList,
   },
   {
-    path: '/posts/create',
-    component: PostCreate,
+    path: '/dashboard',
+    component: Dashboard,
+  },
+  {
+    path: '/profile',
+    component: Profile,
+  },
+  {
+    path: '/users',
+    component: Users,
   },
 ];

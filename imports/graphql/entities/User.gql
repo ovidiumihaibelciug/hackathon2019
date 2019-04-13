@@ -6,6 +6,12 @@ type User {
   posts: [Post]
 }
 
+input CreateUserProfileInput {
+  name: String
+  role: String
+}
+
 type Profile {
   name: String
+  role: String
 }

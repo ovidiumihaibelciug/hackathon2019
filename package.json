@@ -5,7 +5,10 @@
     "start": "meteor run --settings settings.json",
     "test": "meteor test --once --driver-package meteortesting:mocha",
     "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
-    "visualize": "meteor --production --extra-packages bundle-visualizer"
+    "visualize": "meteor --production --extra-packages bundle-visualizer",
+    "svg-icons": "svgo --config .svg/svgo-icons.config.json -f .svg/icons&& svgr --ext jsx --icon --no-svgo --tab-width 4 -d client/components/svg/icons .svg/icons&& create-index ./imports/ui/components/svg/icons --extensions js jsx",
+    "svg-imgs": "svgo --config .svg/svgo-imgs.config.json -f .svg/imgs&& svgr --ext jsx --no-svgo --keep-useless-defs --tab-width 4 -d client/components/svg/imgs .svg/imgs",
+    "svg-imgs-unstyled": "svgo --config .svg/svgo-icons.config.json -f .svg/imgs-unstyled&& svgr --ext jsx --no-svgo --tab-width 4 -d client/components/svg/imgs .svg/imgs-unstyled"
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0-beta.55",
@@ -22,6 +25,8 @@
     "bcrypt": "^3.0.0",
     "body-parser": "^1.18.3",
     "casual": "^1.5.19",
+    "chart.js": "^2.8.0",
+    "classnames": "^2.2.6",
     "easify": "^0.1.0",
     "event-emitter": "^0.3.5",
     "express": "^4.16.3",
@@ -39,6 +44,8 @@
     "moment": "^2.22.2",
     "react": "^16.4.1",
     "react-apollo": "^2.1.9",
+    "react-chartjs": "^1.2.0",
+    "react-chartjs-2": "^2.7.6",
     "react-dom": "^16.4.1",
     "react-molecule": "^0.1.4",
     "react-paginate": "^5.2.3",
@@ -46,6 +53,8 @@
     "react-router-dom": "^4.3.1",
     "simpl-schema": "^1.5.0",
     "subscriptions-transport-ws": "^0.9.12",
+    "svgo": "^1.1.1",
+    "svgr": "^1.9.2",
     "uniforms": "^1.25.0-rc.3",
     "uniforms-antd": "^1.25.0-rc.3",
     "uuid": "^3.3.2"

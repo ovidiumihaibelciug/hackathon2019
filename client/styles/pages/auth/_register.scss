@@ -1,0 +1,96 @@
+.toggle-1 {
+  font-family: Helvetica, Arial, sans-serif;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 15px 0 0;
+}
+.toggle-1__input {
+  display: none;
+}
+.toggle-1__button {
+  position: relative;
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 20px;
+  text-transform: uppercase;
+  background-color: #f2395a;
+  border: solid 1px #f2395a;
+  color: white;
+  width: 100px;
+  height: 35px;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+.toggle-1__button::before {
+  position: absolute;
+  top: 5px;
+  left: 39px;
+  content: "Anime";
+  display: flex;
+  align-items: center;
+  height: 25px;
+  padding: 0 10px;
+  background: white;
+  color: #f2395a;
+  transition: all .3s ease;
+}
+.toggle-1__input:checked + .toggle-1__button {
+  background: #00b3b4;
+  border: solid 1px #00b3b4;
+}
+.toggle-1__input:checked + .toggle-1__button::before {
+  left: 5px;
+  color: #00b3b4;
+  content: "Manga";
+}
+
+
+.register {
+  display: flex;
+  justify-content: space-between;
+  &__image {
+    background: #0575E6;
+    background: -webkit-linear-gradient(to right, #021B79, #0575E6);
+    background: linear-gradient(to right, #021B79, #0575E6);
+    height:100vh;
+    border-bottom-right-radius: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex: 1;
+    width: 40vw;
+    margin-right: 40px;
+    padding: 0 15px;
+    &--img {
+     font-size: 14rem;
+      //margin-bottom: -100px;
+      svg {
+      }
+    }
+  }
+  &__content {
+    flex: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10%;
+    width: 100%;
+    flex-direction: column;
+    &__title {
+      font-family: Roboto, Arial, Helvetica, sans-serif;
+      font-size: 4rem;
+      font-weight: 800;
+      margin-bottom: 50px;
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+      color: #0b1026;
+    }
+    form {
+      width: 100%;
+      input {
+        background-color: #fff;
+      }
+    }
+  }
+}

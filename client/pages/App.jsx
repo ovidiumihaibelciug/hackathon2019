@@ -13,11 +13,7 @@ const { Sider, Content } = Layout;
 const App = () => (
   <ApolloProvider client={client}>
     <BrowserRouter>
-      <Layout>
-        <Content>
-          <Routes />
-        </Content>
-      </Layout>
+        <Routes />
     </BrowserRouter>
   </ApolloProvider>
 );

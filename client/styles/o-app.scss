@@ -2,6 +2,7 @@
 @import "_helpers/variables";
 @import "_helpers/functions";
 @import "_helpers/mixins";
+@import "elements/grid";
 
 //base
 @import "base/font";
@@ -25,6 +26,14 @@
 @import "layout/main/main";
 @import "layout/sidebar";
 @import "layout/header";
+@import "layout/navbar";
 
 //pages
 @import "pages/dashboard";
+@import "pages/auth/login";
+@import "pages/auth/register";
+@import "pages/dashboard/dashboard";
+@import "pages/dashboard/header";
+@import "pages/profile/profile";
+@import "pages/users/users";
+
