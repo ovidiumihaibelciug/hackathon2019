@@ -289,3 +289,49 @@
     }
   }
 }
+
+.load-more__button {
+  display: flex;
+  justify-content: center;
+  &__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.headerResponseGmail {
+  display:flex;
+  margin:0 auto;
+  width:1140px;
+  flex-direction:column;
+  height: 30vh;
+  margin: 30px 0;
+}
+
+.withWho {
+
+  font-size:18px;
+  padding-bottom:10px;
+  line-height:25px;
+
+}
+.readResponseGmail {
+  padding-bottom:10px;
+}
+.replyResponseGmail {
+  margin-top:8px;
+
+}
+.replyResponseGmail p {
+  padding:10px 0;
+  text-shadow: -1px -1px 0px rgba(255,255,255,0.3), 1px 1px 0px rgba(0,0,0,0.8);
+  color: #333;
+  opacity: 0.4;
+}
+.iconResponseGmail {
+  margin-top:10px;
+  font-size:40px;
+  color:gold;
+  text-align:center;
+}

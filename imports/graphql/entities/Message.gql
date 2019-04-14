@@ -1,0 +1,11 @@
+type Message {
+    _id: ID!
+    title: String
+    body: String
+    to: ID!
+    toUser: User
+    from: ID!
+    fromUser: User
+    createdAt: String
+}
+

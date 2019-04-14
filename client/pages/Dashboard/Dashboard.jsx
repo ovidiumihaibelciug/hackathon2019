@@ -65,19 +65,23 @@ class Dashboard extends Component {
         id: 1,
         icon: "fa fa-user",
         text: 'Elevi',
-        number: '720'
+        number: '720',
+        url: "/users"
       },
       {
         id: 2,
         icon: "fa fa-laptop",
         text: 'Supplies',
-        number: '70'
+        number: '70',
+        url: '/supplies'
       },
       {
         id: 3,
         icon: "fa fa-file-text",
         text: 'Documente',
-        number: '1100'
+        number: '1100',
+        url: '/documents'
+
       },
       {
         id: 4,

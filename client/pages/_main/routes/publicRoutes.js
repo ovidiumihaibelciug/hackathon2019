@@ -6,9 +6,11 @@ import Register from '../../Register';
 import PostList from '../../Posts/PostList';
 import Dashboard from '../../Dashboard/Dashboard';
 import Profile from "../../Profile/Profile";
+import ProfileInbox from "../../Profile/ProfileInbox";
 import ProfileDocuments from "../../Profile/ProfileDocuments";
 import Users from "../../Users/Users";
 import Supplies from "../../Supplies";
+import SuppliesCreate from "../../SuppliesCreate";
 import Documents from "../../Documents/Documents";
 import DocumentsCreate from "../../Documents/DocumentsCreate";
 import CompleteInfo from "../../CompleteInfo";
@@ -47,6 +49,11 @@ export default [
     component: ProfileDocuments,
   },
   {
+    path: '/profile/:id/inbox',
+    component: ProfileInbox,
+    // onlyStudent: 1,
+  },
+  {
     path: '/profile/:id',
     component: Profile,
   },
@@ -58,6 +65,12 @@ export default [
   {
     path: '/supplies',
     component: Supplies,
+    onlySecretar: 1,
+  },
+  {
+    path: '/supplies/create',
+    component: SuppliesCreate,
+    onlySecretar: 1,
   },
   {
     path: '/documents',

@@ -7,6 +7,16 @@ import Navbar from "../../components/Navbar";
 import SecondaryNav from "../../components/Profile/SecondaryNav";
 import Loading from '../../components/Loading'
 import DocumentsBox from "../../components/Documents/DocumentsBox";
+import { Molecule, mole } from 'react-molecule';
+import {
+  EasyTable,
+  EasyLoaderAgent,
+  EasyList,
+  EasyLoadMoreAgent,
+  EasyPager,
+  EasyLoadMore
+} from 'easify';
+import db from 'apollo-morpher';
 
 export class Profile extends Component {
 
@@ -16,6 +26,7 @@ export class Profile extends Component {
   };
 
   componentDidMount() {
+    const id = this.props.match.params || Meteor.userId();
     if (!Meteor.userId()) {
       const { id } = this.props.match.params;
       const fields = {
@@ -40,7 +51,9 @@ export class Profile extends Component {
         .findOne(fields, {
           filters: { _id: id },
         })
-        .then(result => this.setState({ user: result, loading: false }));
+        .then(result => {
+          this.setState({ user: result, loading: false });
+        });
 
     } else {
       this.setState({
@@ -49,6 +62,39 @@ export class Profile extends Component {
       });
     }
 
+  }
+
+  load = ({ filters, options }) => {
+    const id = this.props.match.params.id || Meteor.userId();
+    return db.documents.find({
+      _id: 1,
+      pdf: 1,
+      type: 1,
+      title: 1,
+    }, {
+      filters: {
+        ...filters,
+        userId: id
+      },
+      options
+    });
+  };
+
+  count = ({ filters, options }) => {
+    const id = this.props.match.params.id || Meteor.userId();
+
+    return db.documents.count({
+      _id: 1,
+      pdf: 1,
+      type: 1,
+      title: 1,
+    }, {
+      filters: {
+        ...filters,
+        userId: id
+      },
+      options
+    });
   }
 
   render() {
@@ -81,7 +127,25 @@ export class Profile extends Component {
               </div>
             </div>
             <div className="profile-body__rightside">
-              <DocumentsBox />
+              <Molecule
+                agents={{
+                  loader: EasyLoaderAgent.factory({ load: this.load }),
+                  loadMore: EasyLoadMoreAgent.factory({
+                    count: this.count,
+                    initialItemsCount: 1,
+                    loadItemsCount: 3,
+                  }),
+                }}
+              >
+                <EasyList>
+                  {({ data, loading, molecule }) => {
+                    return data.map(item => <DocumentsBox {...item} />);
+                  }}
+                </EasyList>
+                <div className="load-more__button__container">
+                  <EasyLoadMore className="load-more__button" />
+                </div>
+              </Molecule>
             </div>
           </div>
         </div>

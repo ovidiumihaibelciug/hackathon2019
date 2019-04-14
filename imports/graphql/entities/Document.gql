@@ -1,10 +1,10 @@
 type Document {
     _id: ID!
-    name: String
+    title: String
     type: String
     pdf: String
     createdAt: String
-    userId: ID,
+    userId: ID!,
     user: User,
 }
 

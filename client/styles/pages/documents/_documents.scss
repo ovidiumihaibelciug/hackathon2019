@@ -3,9 +3,11 @@
   margin-top: 150px;
   background: whitesmoke;
   &__items {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    .easy-list-wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
   }
   &__item {
     min-height: 200px;
@@ -91,4 +93,11 @@
       }
     }
   }
+}
+
+
+.supply-main__form {
+  margin: 0 5%;
+  margin-top: 100px;
+  padding: 15px;
 }

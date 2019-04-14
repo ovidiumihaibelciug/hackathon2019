@@ -1,6 +1,6 @@
 import React from 'react';
 import { Registry } from 'react-molecule';
-import { Pagination } from 'antd';
+import { Pagination, Button } from 'antd';
 
 Registry.blend({
   EasyPagination({ pageCount, forcePage, onPageChange }) {
@@ -23,4 +23,11 @@ Registry.blend({
   EasyTableRow(props) {
     return <tr className="ant-table-row ant-table-row-level-0" {...props} />;
   },
+  EasyLoadMore(props) {
+    return <div>
+      <Button type="primary" ghost outline {...props}>
+        Show More
+      </Button>
+    </div>
+  }
 });

@@ -2,9 +2,6 @@ import { Users } from '/imports/db';
 import Security from '/imports/api/security';
 
 const typeDefs = `
-  type Query {
-    users: [User]
-  }
 
   type Mutation {
     updateUser(_id: ID!, data: UpdateUserInput): User!
@@ -22,11 +19,11 @@ const typeDefs = `
 `;
 
 const resolvers = {
-  Query: {
-    users() {
-      return Users.find().fetch();
-    },
-  },
+  // Query: {
+  //   users() {
+  //     return Users.find().fetch();
+  //   },
+  // },
   Mutation: {
     updateUser(_, { _id, data }, { userId }, ast) {
       if (userId !== _id) {

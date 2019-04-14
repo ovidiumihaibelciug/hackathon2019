@@ -2,15 +2,23 @@
   padding: 0 5%;
   margin-top: 150px;
   background: whitesmoke;
+  &__container {
+    padding: 0 5%;
+    width: 100%;
+    margin: 30px 0;
+  }
   &__items {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    .easy-list-wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      flex-wrap: wrap;
+    }
   }
   &__item {
     min-height: 200px;
-    min-width: 400px;
+    width: 500px;
     margin-bottom: 30px;
+    flex: 1;
   }
   &__button {
     margin-top: -100px;
@@ -23,7 +31,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 50px;
   margin-bottom: 150px;
+  color: rgba(black, .7);
+  transition: all .3s ease-in-out;
+  &:hover {
+    background-color: rgba(white, .7) !important;
+    color: rgba(black, .5);
+    .users-item__image-section {
+      transform: scale(1.1) !important;
+    }
+  }
   &__image-section {
     border-radius: 50%;
     height: 200px;
@@ -33,6 +51,8 @@
     justify-content: center;
     margin-top: - 100px;
     border: 6px solid whitesmoke;
+    transform: scale(1);
+    transition: all .3s ease-in-out;
   }
   &__image {
     border-radius: 50%;
@@ -47,5 +67,71 @@
   }
   &__class {
     font-size: 1.5rem;
+  }
+}
+.filters-secondary {
+  &__line {
+    margin-top: 50px;
+    margin-bottom: 60px;
+    height: 10px;
+    border-bottom: 1px solid rgba(black, .1);
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    &__box {
+      background-color: rgba(black, 0.7);
+      color: #0575E6;
+      font-size: 1.2rem;
+      font-weight: 100;
+      padding: 7px 15px;
+      letter-spacing: 1.5px;
+      border-radius: 5px;
+      position: absolute;
+      text-align: center;
+      top: -5px;
+      cursor: pointer;
+      text-transform: uppercase;
+
+      &:hover {
+        background-color: rgba(black, 0.5);
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
+  }
+
+  &__container {
+    margin-bottom: 50px;
+    margin-top: 50px;
+    position: relative;
+    display: block;
+    background-color: #111a20;
+    padding: 30px 20px;
+    -webkit-box-shadow: inset 0px 0px 8px 6px rgba(0, 0, 0, 0.06);
+    -moz-box-shadow: inset 0px 0px 8px 6px rgba(0, 0, 0, 0.06);
+    box-shadow: inset 0px 0px 8px 6px rgba(0, 0, 0, 0.06);
+    border-radius: 5px;
+
+    .ant-form-item-label {
+      label {
+        font-size: 1.4rem;
+        color: #0575E6;
+      }
+    }
+
+    input {
+      color: aliceblue;
+      background-color: transparent;
+      border-bottom-color: #656a77;
+
+      ::placeholder {
+        color: #898c92;
+      }
+
+      &:focus {
+        border-bottom-color: #0575E6;
+      }
+    }
+
   }
 }

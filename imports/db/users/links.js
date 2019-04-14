@@ -1,16 +1,22 @@
 import Users from './collection';
-import Posts from '../posts/collection';
 import Documents from '../documents/collection';
+import Supplies from "../supplies/collection";
+import Messages from "../messages/collection";
 
 Users.addLinks({
-  posts: {
-    collection: Posts,
-    type: 'many',
-    inversedBy: 'user'
-  },
   documents: {
     collection: Documents,
+    type: 'Many',
+    inversedBy: 'user'
+  },
+  supplies: {
+    collection: Supplies,
     type: 'many',
     inversedBy: 'user'
   },
+  receivedMessages: {
+    collection: Messages,
+    type: 'many',
+    inversedBy: 'fromUser'
+  }
 })

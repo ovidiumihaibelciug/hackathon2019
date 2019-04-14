@@ -26,11 +26,11 @@ class AdvancedRoute extends Component {
     } = this.props;
 
     if (onlyStudent && !Roles.userIsInRole(userId, 'STUDENT')) {
-      return <Redirect to={'/'} />;
+      return <Redirect to={'/dashboard'} />;
     }
 
-    if (onlySecretar && !Roles.userIsInRole(userId, 'SECRETAR')) {
-      return <Redirect to={'/'} />;
+    if (onlySecretar && Roles.userIsInRole(userId, 'STUDENT')) {
+      return <Redirect to={'/profile'} />;
     }
 
     if (auth && !userId) {

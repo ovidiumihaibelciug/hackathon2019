@@ -11,13 +11,13 @@ class Navbar extends Component {
         <div className="navbar__inner">
           <div className="navbar__left-side">
             <div className="navbar__left-side__logo">Logo</div>
-            <div className="navbar__left-side__item"><NavLink to={"/dashboard"} activeClassName="navbar__left-side__item--active" />Dashboard</div>
-            <div className="navbar__left-side__item"><NavLink to={"/dashboard"} activeClassName="navbar__left-side__item--active" />Documents</div>
+            <div className="navbar__left-side__item"><NavLink to={"/dashboard"} activeClassName="navbar__left-side__item--active">Dashboard</NavLink></div>
+            <div className="navbar__left-side__item"><NavLink to={"/documents"} activeClassName="navbar__left-side__item--active">Documents</NavLink></div>
           </div>
           <div className="navbar__right-side">
             <div className="navbar__right-side__user">
-              <div className="navbar__right-side__user__image"></div>
-              <div className="navbar__right-side__user__name">John Snow</div>
+              <div className="navbar__right-side__user__image" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1456327102063-fb5054efe647?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80')` }}></div>
+              <div className="navbar__right-side__user__name">{Meteor.user().profile.name}</div>
             </div>
           </div>
         </div>

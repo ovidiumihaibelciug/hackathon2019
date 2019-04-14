@@ -7,12 +7,6 @@
   color: white;
   border-bottom: 1px solid rgba(white, .1);
   z-index: 10;
-  &__white {
-    box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
-    border-bottom: none;
-    color: #505763;
-    background-color: white;
-  }
   &__inner {
     display: flex;
     align-items: center;
@@ -33,8 +27,15 @@
     &__item {
       height: 80%;
       font-weight: 600;
+      color: white;
+      a {
+        color: white;
+      }
       &:hover {
         background: rgba(white, .15);
+        a {
+          color: white;
+        }
       }
     }
   }
@@ -51,6 +52,9 @@
         width: 30px;
         border-radius: 100%;
         background-color: red;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
       }
       &__name {
         font-size: 1.2rem;
@@ -98,6 +102,19 @@
       font-weight: bold;
       border-bottom: 2px solid $color-main;
       transition: all .3s ease-in-out;
+    }
+  }
+}
+
+.navbar {
+  &__white {
+    background-color: white !important;
+    a, div {
+      border-bottom: none;
+      color: #505763 !important;
+      &:hover {
+        color: $color-main !important;
+      }
     }
   }
 }
