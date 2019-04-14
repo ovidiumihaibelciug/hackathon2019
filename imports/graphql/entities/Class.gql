@@ -1,0 +1,10 @@
+type ClassType {
+    id: ID!
+    number: String
+    letter: String
+    teacherId: String
+    teacher: User
+    createdAt: String
+    usersIds: [String]
+    users: [User]
+}

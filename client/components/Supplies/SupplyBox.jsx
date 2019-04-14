@@ -12,7 +12,7 @@ class SupplyBox extends Component {
       <ScrollAnimation animateIn="fadeIn" delay={id * 150}>
         <div className={classNames("supplies-item box", className)}>
           <div className="supplies-item__image-section">
-            <div className="supplies-item__image"></div>
+            <div className="supplies-item__image" style={{ backgroundImage: `url('https://cdn.lyft.com/developerportal/developer-og-image.dbb580e5.jpg')` }}></div>
           </div>
           <div className="supplies-item__fullname">{title}</div>
           <div className="supplies-item__class">Description: {description}</div>

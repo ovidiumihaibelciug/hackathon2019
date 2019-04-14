@@ -110,8 +110,8 @@ class Supplies extends Component {
               loader: EasyLoaderAgent.factory({load: this.load}),
               loadMore: EasyLoadMoreAgent.factory({
                 count: this.count,
-                initialItemsCount: 4,
-                loadItemsCount: 4,
+                initialItemsCount: 6,
+                loadItemsCount: 6,
               }),
             }}
           >

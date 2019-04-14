@@ -1,0 +1,8 @@
+type Money {
+    id: ID!
+    userIds: [ID!]
+    users: [User]
+    total: String
+    createdAt: Date
+    expiresAt: Date
+}

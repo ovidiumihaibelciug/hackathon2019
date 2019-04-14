@@ -2,7 +2,7 @@ import {Accounts} from 'meteor/accounts-base';
 import {Roles} from 'meteor/alanning:roles';
 import casual from 'casual';
 
-import {Supplies, Users, Messages} from '../db';
+import {Supplies, Users, Messages, Documents} from '../db';
 
 const PASSWORD = '12345';
 
@@ -15,12 +15,23 @@ function createUser(email, roles, data) {
   Users.update(
     {_id: userId},
     {
-      $set: {name: casual.name, profile: {name: userId, ...data}},
+      $set: {name: casual.name, profile: {...data}},
     },
   );
 
   Roles.addUsersToRoles(userId, roles);
-  Users.update(userId, {$set: {profile: {name: userId}}});
+}
+
+function createSuplies(data) {
+  Supplies.insert(data);
+}
+
+function createMessages(data) {
+  Messages.insert(data);
+}
+
+function createDocument(data) {
+  Documents.insert(data);
 }
 
 export function loadFixtures() {
@@ -28,31 +39,36 @@ export function loadFixtures() {
   createUser('staff-1@gmail.com', ['SECRETAR']);
   createUser('staff-2@gmail.com', ['SECRETAR']);
   for (i = 0; i <= 30; i++) {
-    createUser(`user-${i}@gmail.com`, ['STUDENT'], {classNumber: "10", classLetter: "A", classTeacher: "b"});
+    createUser(`user-${i}@gmail.com`, ['STUDENT'], {name: casual.name, classNumber: "10", classLetter: "A", classTeacher: "b", role: 'STUDENT'});
   }
-}
 
-function createSuplies(data) {
-  Supplies.insert(data);
-}
-Users.find()
-  .fetch()
-  .forEach((user) => {
-    if (Roles.userIsInRole(user, 'SECRETAR')) {
-      createSuplies({ title: casual.title, description: casual.sentence, tags: [casual.title], userId: user._id })
-    }
-  });
+  Users.find()
+    .fetch()
+    .forEach((user) => {
+      if (Roles.userIsInRole(user, 'SECRETAR')) {
+        createSuplies({ title: casual.title, description: casual.sentence, tags: [casual.title], userId: user._id })
+        createSuplies({ title: casual.title, description: casual.sentence, tags: [casual.title], userId: user._id })
+        createSuplies({ title: casual.title, description: casual.sentence, tags: [casual.title], userId: user._id })
+        createSuplies({ title: casual.title, description: casual.sentence, tags: [casual.title], userId: user._id })
+        createSuplies({ title: casual.title, description: casual.sentence, tags: [casual.title], userId: user._id })
+      }
+    });
 
-function createMessages(data) {
-  Messages.insert(data);
-}
-Users.find()
-  .fetch()
-  .forEach((user) => {
-    User.find().fetch().forEach((user2) => {
 
+  Users.find()
+    .fetch()
+    .forEach((user) => {
+      Users.find().fetch().forEach((user2) => {
+        createMessages({ title: casual.title, body: casual.description, to: user._id , from: user2._id})
+      })
+    });
+
+
+
+  Users.find()
+    .fetch()
+    .forEach((user) => {
+      createDocument({ type: casual.word, title: casual.title, pdf: casual.url, userId: user._id });
     })
-    if (Roles.userIsInRole(user, 'SECRETAR')) {
-      createSuplies({ title: casual.title, description: casual.sentence, tags: [casual.title], userId: user._id })
-    }
-  });
+}
+

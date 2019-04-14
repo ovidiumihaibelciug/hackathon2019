@@ -1,0 +1,7 @@
+type Paper{
+    id: ID!
+    userId: ID!
+    user: User
+    createdAt: Date
+    recieved: Int
+}

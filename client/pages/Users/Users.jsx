@@ -131,7 +131,7 @@ class Users extends Component {
                     }}
                   </EasyList>
                 </div>
-                <div className="load-more__button__container">
+                <div className="load-more__button__container users-pager">
                   <EasyPager/>
                 </div>
               </div>

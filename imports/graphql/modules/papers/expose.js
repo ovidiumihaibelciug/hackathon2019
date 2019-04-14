@@ -2,10 +2,10 @@ import { db, expose } from 'meteor/cultofcoders:apollo';
 import Security from '/imports/api/security';
 
 expose({
-  documents: {
-    type: 'Document',
+  papers: {
+    type: 'Paper',
     collection: () => {
-      return db.documents;
+      return db.papers;
     },
     update({ userId }) {
 

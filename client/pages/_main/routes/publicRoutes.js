@@ -62,11 +62,7 @@ export default [
     path: '/profile/:id',
     component: Profile,
   },
-  {
-    path: '/users',
-    component: Users,
-    onlySecretar: 1,
-  },
+
   {
     path: '/supplies',
     component: Supplies,
