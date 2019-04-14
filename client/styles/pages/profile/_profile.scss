@@ -3,9 +3,6 @@
   height: 300px;
   margin-top: 2px;
   background-position: center center;
-  // border: 2px solid #ECEFF1;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
 }
 
 .profile-body {
@@ -20,6 +17,13 @@
   &__rightside {
     flex: 5;
     margin-top: 20px;
+    height: auto;
+    .easy-list-wrapper {
+      height: 100%;
+      .documents-item:not(:first-child) {
+        margin-top: 200px;
+      }
+    }
   }
   .profile-general {
     margin-top: $profile-margin;
@@ -264,8 +268,9 @@
     }
     &__info {
       font-size: 20px;
-      p {
-        margin-top:5px;
+      width: 100%;
+      &__item {
+        width: 100%;
         word-break: break-all;
       }
     }
@@ -302,11 +307,12 @@
 
 .headerResponseGmail {
   display:flex;
-  margin:0 auto;
   width:1140px;
   flex-direction:column;
-  height: 30vh;
+  height: auto;
   margin: 30px 0;
+  padding: 35px 20px;
+  padding-top: 0;
 }
 
 .withWho {
@@ -330,8 +336,32 @@
   opacity: 0.4;
 }
 .iconResponseGmail {
-  margin-top:10px;
+  margin-top: -30px;
   font-size:40px;
-  color:gold;
+  color: #0575E6;
   text-align:center;
+}
+
+.message {
+  padding: 10px;
+  &__title {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  &__details {
+    display: flex;
+    font-size: 1.5rem;
+  }
+}
+
+.profile__documents-row {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  .easy-list-wrapper {
+    display: flex;
+    > * {
+      margin: 0 20px !important;
+    }
+  }
 }

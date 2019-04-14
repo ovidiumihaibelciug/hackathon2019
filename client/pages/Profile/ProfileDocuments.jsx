@@ -71,6 +71,11 @@ export class Profile extends Component {
       pdf: 1,
       type: 1,
       title: 1,
+      user: {
+        profile: {
+          name: 1,
+        }
+      }
     }, {
       filters: {
         ...filters,
@@ -117,9 +122,8 @@ export class Profile extends Component {
               <ProfileGeneral user={user}/>
               <div className="profile__general__box box">
                 <div className="profile__general__info">
-                  <p>Nume: {user.profile.name}</p>
-                  <p>Clasa: a {user.profile.classNumber}-a {user.profile.classLetter}</p>
-                  <p>E-mail: {user.emails[0].address}</p>
+                  <div>Clasa: a {user.profile.classNumber}-a {user.profile.classLetter}</div>
+                  <div>E-mail: {user.emails[0].address}</div>
                   <div className="profile__general__button__container">
                     <Button className="profile__general__button" type="primary" ghost>Mesaj</Button>
                   </div>
@@ -132,16 +136,18 @@ export class Profile extends Component {
                   loader: EasyLoaderAgent.factory({ load: this.load }),
                   loadMore: EasyLoadMoreAgent.factory({
                     count: this.count,
-                    initialItemsCount: 1,
+                    initialItemsCount: 9,
                     loadItemsCount: 3,
                   }),
                 }}
               >
-                <EasyList>
-                  {({ data, loading, molecule }) => {
-                    return data.map(item => <DocumentsBox {...item} />);
-                  }}
-                </EasyList>
+                <div className="profile__documents-row">
+                    <EasyList>
+                    {({ data, loading, molecule }) => {
+                      return data.map(item => <DocumentsBox horizontal {...item} />);
+                    }}
+                  </EasyList>
+                </div>
                 <div className="load-more__button__container">
                   <EasyLoadMore className="load-more__button" />
                 </div>

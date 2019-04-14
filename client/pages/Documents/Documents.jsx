@@ -58,7 +58,7 @@ class Documents extends Component {
             <div className="documents__items">
               <EasyList>
                 {({data, loading, molecule}) => {
-                  return data.map(item => <DocumentsBox className="documents__item" {...item} />);
+                  return data.map((item, id) => <DocumentsBox className="documents__item" id={id} {...item} />);
                 }}
               </EasyList>
             </div>

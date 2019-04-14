@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import "animate.css/animate.min.css";
 
 class Wrapper extends Component {
   render() {

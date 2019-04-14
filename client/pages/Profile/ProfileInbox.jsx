@@ -1,25 +1,18 @@
 import React, {Component} from 'react'
 import ProfileCover from '../../components/Profile/ProfileCover';
 import ProfileGeneral from '../../components/Profile/ProfileGeneral';
-import ActivityBox from "../../components/Profile/ActivityBox";
 import {Button, Modal} from 'antd';
 import Navbar from "../../components/Navbar";
 import SecondaryNav from "../../components/Profile/SecondaryNav";
 import Loading from '../../components/Loading'
-import DocumentsBox from "../../components/Documents/DocumentsBox";
-import { Molecule, mole } from 'react-molecule';
-import {
-  EasyTable,
-  EasyLoaderAgent,
-  EasyList,
-  EasyLoadMoreAgent,
-  EasyPager,
-  EasyLoadMore
-} from 'easify';
+import {Molecule} from 'react-molecule';
+import {EasyList, EasyLoaderAgent, EasyLoadMore, EasyLoadMoreAgent} from 'easify';
 import db from 'apollo-morpher';
 import MessageBox from "../../components/MessageBox";
 import {AutoForm} from "uniforms-antd";
 import SimpleSchema from "simpl-schema";
+import notification from "antd/lib/notification";
+import ScrollAnimation from 'react-animate-on-scroll';
 
 export class Profile extends Component {
 
@@ -31,7 +24,7 @@ export class Profile extends Component {
   componentDidMount() {
     const id = this.props.match.params || Meteor.userId();
     if (!Meteor.userId()) {
-      const { id } = this.props.match.params;
+      const {id} = this.props.match.params;
       const fields = {
         _id: 1,
         createdAt: 1,
@@ -52,10 +45,10 @@ export class Profile extends Component {
       };
       db.users
         .findOne(fields, {
-          filters: { _id: id },
+          filters: {_id: id},
         })
         .then(result => {
-          this.setState({ user: result, loading: false });
+          this.setState({user: result, loading: false});
         });
 
     } else {
@@ -71,33 +64,37 @@ export class Profile extends Component {
     this.setState({
       visible: true,
     });
-  }
+  };
 
   handleOk = (e) => {
     console.log(e);
     this.setState({
       visible: false,
     });
-  }
+  };
 
   handleCancel = (e) => {
-    console.log(e);
     this.setState({
       visible: false,
     });
-  }
+  };
 
   onSubmit = data => {
     data.from = Meteor.userId();
-    data.to = this.props.match.params.id;
+    data.to = this.props.match.params.id || Meteor.userId();
     db.messages.insert(
       data
     ).then((id) => {
-      console.log(id);
+      notification.open({
+        message: 'Message sent',
+      });
+      this.setState({
+        visible: false
+      })
     });
   };
 
-  load = ({ filters, options }) => {
+  load = ({filters, options}) => {
     const id = this.props.match.params.id || Meteor.userId();
     return db.messages.find({
       _id: 1,
@@ -113,11 +110,18 @@ export class Profile extends Component {
         ...filters,
         to: id
       },
-      options
+      options: {
+        ...options,
+        sort: {
+          createdAt: -1
+        }
+      }
+    }, {
+      fetchPolicy: 'no-cache'
     });
   };
 
-  count = ({ filters, options }) => {
+  count = ({filters, options}) => {
     const id = this.props.match.params.id || Meteor.userId();
 
     return db.messages.count({
@@ -130,39 +134,41 @@ export class Profile extends Component {
       },
       options
     });
-  }
+  };
 
   render() {
-    const { user, loading } = this.state;
-    const id = this.props.match.params.id || Meteor.userId() ;
+    const {user, loading} = this.state;
+    const id = this.props.match.params.id || Meteor.userId();
     let img = 'https://i.imgur.com/GcP71BP.png';
 
     if (loading) {
-      return <Loading />
+      return <Loading/>
     }
 
     return (
       <React.Fragment>
-        <Navbar className="navbar__white" />
+        <Navbar className="navbar__white"/>
         <div className="profile__container">
           <ProfileCover cover={img}/>
-          <SecondaryNav />
+          <SecondaryNav/>
           <div className="profile-body">
             <div className="profile-body__leftside">
               <ProfileGeneral user={user}/>
+
               <div className="profile__general__box box">
                 <div className="profile__general__info">
-                  <p>Nume: {user.profile.name}</p>
                   <p>Clasa: a {user.profile.classNumber}-a {user.profile.classLetter}</p>
                   <p>E-mail: {user.emails[0].address}</p>
-                  <Button onClick={this.showModal} className="profile__general__button" type="primary" ghost>Mesaj</Button>
+                  <Button onClick={this.showModal} className="profile__general__button" type="primary"
+                          ghost>Mesaj</Button>
                   <Modal
                     title="Basic Modal"
                     visible={this.state.visible}
                     onOk={this.handleOk}
                     onCancel={this.handleCancel}
+                    footer={null}
                   >
-                    <AutoForm schema={CompleteInfoSchema} onSubmit={this.onSubmit} />
+                    <AutoForm schema={CompleteInfoSchema} onSubmit={this.onSubmit}/>
                   </Modal>
                 </div>
               </div>
@@ -170,21 +176,23 @@ export class Profile extends Component {
             <div className="profile-body__rightside">
               <Molecule
                 agents={{
-                  loader: EasyLoaderAgent.factory({ load: this.load }),
+                  loader: EasyLoaderAgent.factory({load: this.load}),
                   loadMore: EasyLoadMoreAgent.factory({
                     count: this.count,
-                    initialItemsCount: 1,
+                    initialItemsCount: 3,
                     loadItemsCount: 3,
                   }),
                 }}
               >
                 <EasyList>
-                  {({ data, loading, molecule }) => {
-                    return data.map(item => <MessageBox {...item} />);
+                  {({data, loading, molecule}) => {
+                    return data.map(item => <ScrollAnimation animateIn="fadeIn">
+                      <MessageBox {...item} />
+                    </ScrollAnimation>);
                   }}
                 </EasyList>
                 <div className="load-more__button__container">
-                  <EasyLoadMore className="load-more__button" />
+                  <EasyLoadMore className="load-more__button"/>
                 </div>
               </Molecule>
             </div>

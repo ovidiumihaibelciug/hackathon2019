@@ -4,13 +4,17 @@
     <list default="true" id="ab4fc50d-544b-40a6-a18e-b8df20f2a140" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/Documents/DocumentsBox.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Documents/DocumentsBox.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/MessageBox.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/MessageBox.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Profile/SecondaryNav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Profile/SecondaryNav.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Wrapper.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Wrapper.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/pages/Documents/Documents.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/Documents/Documents.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/Documents/DocumentsCreate.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/Documents/DocumentsCreate.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/Supplies.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/Supplies.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/Users/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/Users/Users.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/Profile/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/Profile/ProfileDocuments.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/Profile/ProfileDocuments.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/Profile/ProfileInbox.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/Profile/ProfileInbox.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/_main/routes/publicRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/_main/routes/publicRoutes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/styles/pages/documents/_documents.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/pages/documents/_documents.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/styles/pages/users/users.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/pages/users/users.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/npm-debug.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/styles/pages/profile/_profile.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/pages/profile/_profile.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -27,19 +31,25 @@
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/pages/Dashboard/Dashboard.jsx">
+            <entry file="file://$PROJECT_DIR$/client/components/Documents/DocumentsBox.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-367">
-                  <caret line="94" column="22" selection-start-line="94" selection-start-column="22" selection-end-line="94" selection-end-column="22" />
+                <state relative-caret-position="161">
+                  <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+                  <folding>
+                    <element signature="e#0#49#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/styles/pages/documents/_documents.scss">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/client/pages/Profile/ProfileDocuments.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="644">
-                  <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
+                <state relative-caret-position="277">
+                  <caret line="139" column="37" lean-forward="true" selection-start-line="139" selection-start-column="37" selection-end-line="139" selection-end-column="37" />
+                  <folding>
+                    <element signature="e#0#38#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -47,8 +57,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/client/pages/Documents/Documents.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="211">
-                  <caret line="57" column="41" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
+                <state relative-caret-position="289">
+                  <caret line="60" column="43" selection-start-line="60" selection-start-column="43" selection-end-line="60" selection-end-column="43" />
                   <folding>
                     <element signature="e#0#39#0" expanded="true" />
                   </folding>
@@ -56,13 +66,25 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/client/components/Documents/DocumentsBox.jsx">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/client/pages/Profile/ProfileInbox.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="368">
-                  <caret line="28" column="4" lean-forward="true" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+                <state relative-caret-position="303">
+                  <caret line="158" column="46" selection-start-line="158" selection-start-column="46" selection-end-line="158" selection-end-column="46" />
                   <folding>
-                    <element signature="e#0#39#0" expanded="true" />
+                    <element signature="e#0#38#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/client/pages/Profile/Profile.jsx">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="345">
+                  <caret line="134" column="32" lean-forward="true" selection-start-line="134" selection-start-column="32" selection-end-line="134" selection-end-column="32" />
+                  <folding>
+                    <element signature="e#0#38#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -71,9 +93,39 @@
         </leaf>
       </split-first>
       <split-second>
-        <splitter split-orientation="vertical" split-proportion="0.56578946">
+        <splitter split-orientation="vertical" split-proportion="0.6528571">
           <split-first>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+              <file pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/client/styles/pages/profile/_profile.scss">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="292">
+                      <caret line="363" column="17" selection-start-line="363" selection-start-column="17" selection-end-line="363" selection-end-column="17" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/client/styles/pages/documents/_documents.scss">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="268">
+                      <caret line="52" column="21" lean-forward="true" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/client/pages/SuppliesCreate.jsx">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="138">
+                      <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="29" selection-end-column="12" />
+                      <folding>
+                        <element signature="e#0#39#0" expanded="true" />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
               <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/client/pages/Users/Users.jsx">
                   <provider selected="true" editor-type-id="text-editor">
@@ -86,11 +138,11 @@
                   </provider>
                 </entry>
               </file>
-              <file pinned="false" current-in-tab="true">
+              <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/client/styles/pages/users/users.scss">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="159">
-                      <caret line="211" column="17" selection-start-line="211" selection-start-column="17" selection-end-line="211" selection-end-column="17" />
+                    <state relative-caret-position="274">
+                      <caret line="216" selection-start-line="216" selection-end-line="216" />
                     </state>
                   </provider>
                 </entry>
@@ -98,8 +150,8 @@
               <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/client/styles/pages/dashboard/_header.scss">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="69">
-                      <caret line="3" column="64" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="64" />
+                    <state relative-caret-position="92">
+                      <caret line="4" column="56" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="56" />
                     </state>
                   </provider>
                 </entry>
@@ -161,24 +213,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.count</find>
-      <find>Molecu</find>
-      <find>Molecule</find>
-      <find>E</find>
-      <find>documents {</find>
-      <find>./supplies/co</find>
-      <find>easy-list</find>
-      <find>EasyLoadMore</find>
-      <find>.insert</find>
-      <find>insert</find>
-      <find>message.</find>
-      <find>notifica</find>
-      <find>profile</find>
-      <find>MessageBox</find>
-      <find>inse</find>
-      <find>{data</find>
-      <find>__white</find>
-      <find>new s</find>
       <find>&lt;Autoform</find>
       <find>$color-main</find>
       <find>linea</find>
@@ -191,6 +225,24 @@
       <find>$whi</find>
       <find>$</find>
       <find>documents__item</find>
+      <find>inbox</find>
+      <find>linear</find>
+      <find>border-bottom-r</find>
+      <find>messages.inser</find>
+      <find>messages.in</find>
+      <find>notifica</find>
+      <find>load =</find>
+      <find>modal</find>
+      <find>Scroll</find>
+      <find>width: 200px</find>
+      <find>horizo</find>
+      <find>documents-row</find>
+      <find>documents-item</find>
+      <find>ScrollAni</find>
+      <find>load</find>
+      <find>profile__documents-row</find>
+      <find>__documents-row</find>
+      <find>easy</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/client/layout</dir>
@@ -204,7 +256,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client/styles/_helpers/_variables.scss" />
         <option value="$PROJECT_DIR$/client/pages/Posts/PostCreate.jsx" />
         <option value="$PROJECT_DIR$/client/styles/pages/auth/_register.scss" />
         <option value="$PROJECT_DIR$/client/pages/Register.jsx" />
@@ -219,7 +270,6 @@
         <option value="$PROJECT_DIR$/imports/graphql/modules/users/expose.js" />
         <option value="$PROJECT_DIR$/imports/graphql/modules/users/index.js" />
         <option value="$PROJECT_DIR$/client/components/Users/UserBox.jsx" />
-        <option value="$PROJECT_DIR$/client/components/Profile/SecondaryNav.jsx" />
         <option value="$PROJECT_DIR$/client/pages/_main/routes/components/AdvancedRoute.jsx" />
         <option value="$PROJECT_DIR$/client/pages/Supplies/Supplies.jsx" />
         <option value="$PROJECT_DIR$/imports/db/supplies/collections.js" />
@@ -237,24 +287,26 @@
         <option value="$PROJECT_DIR$/imports/db/messages/collection.js" />
         <option value="$PROJECT_DIR$/imports/db/messages/links.js" />
         <option value="$PROJECT_DIR$/imports/db/links.js" />
-        <option value="$PROJECT_DIR$/client/components/Navbar.jsx" />
         <option value="$PROJECT_DIR$/imports/graphql/entities/User.gql" />
         <option value="$PROJECT_DIR$/imports/db/users/links.js" />
-        <option value="$PROJECT_DIR$/client/pages/_main/routes/publicRoutes.js" />
-        <option value="$PROJECT_DIR$/client/pages/Profile/ProfileDocuments.jsx" />
-        <option value="$PROJECT_DIR$/client/pages/Profile/Profile.jsx" />
         <option value="$PROJECT_DIR$/client/styles/layout/_navbar.scss" />
-        <option value="$PROJECT_DIR$/client/pages/Profile/ProfileInbox.jsx" />
-        <option value="$PROJECT_DIR$/client/components/MessageBox.jsx" />
-        <option value="$PROJECT_DIR$/client/styles/pages/profile/_profile.scss" />
         <option value="$PROJECT_DIR$/client/pages/Users/Users.jsx" />
         <option value="$PROJECT_DIR$/client/pages/Dashboard/Dashboard.jsx" />
         <option value="$PROJECT_DIR$/client/pages/Supplies.jsx" />
-        <option value="$PROJECT_DIR$/client/pages/Documents/Documents.jsx" />
         <option value="$PROJECT_DIR$/client/styles/pages/users/users.scss" />
         <option value="$PROJECT_DIR$/client/pages/Documents/DocumentsCreate.jsx" />
+        <option value="$PROJECT_DIR$/client/pages/_main/routes/publicRoutes.js" />
+        <option value="$PROJECT_DIR$/client/components/Profile/SecondaryNav.jsx" />
+        <option value="$PROJECT_DIR$/client/components/MessageBox.jsx" />
+        <option value="$PROJECT_DIR$/client/components/Navbar.jsx" />
+        <option value="$PROJECT_DIR$/client/components/Wrapper.jsx" />
+        <option value="$PROJECT_DIR$/client/pages/Profile/Profile.jsx" />
         <option value="$PROJECT_DIR$/client/styles/pages/documents/_documents.scss" />
+        <option value="$PROJECT_DIR$/client/pages/Documents/Documents.jsx" />
         <option value="$PROJECT_DIR$/client/components/Documents/DocumentsBox.jsx" />
+        <option value="$PROJECT_DIR$/client/pages/Profile/ProfileInbox.jsx" />
+        <option value="$PROJECT_DIR$/client/styles/pages/profile/_profile.scss" />
+        <option value="$PROJECT_DIR$/client/pages/Profile/ProfileDocuments.jsx" />
       </list>
     </option>
   </component>
@@ -394,7 +446,7 @@
       <workItem from="1555008781252" duration="12254000" />
       <workItem from="1555138163131" duration="11450000" />
       <workItem from="1555152789974" duration="12886000" />
-      <workItem from="1555165905049" duration="40582000" />
+      <workItem from="1555165905049" duration="46964000" />
     </task>
     <task id="LOCAL-00001" summary="added sass">
       <created>1554911931301</created>
@@ -480,17 +532,24 @@
       <option name="project" value="LOCAL" />
       <updated>1555202562331</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="-">
+      <created>1555207345212</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1555207345212</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98022000" />
+    <option name="totallyTimeSpent" value="104404000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21366121" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.21366121" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -564,37 +623,10 @@
     <MESSAGE value="pdf stuff" />
     <MESSAGE value="more stuff done" />
     <MESSAGE value="even more stuff done" />
-    <option name="LAST_COMMIT_MESSAGE" value="even more stuff done" />
+    <MESSAGE value="-" />
+    <option name="LAST_COMMIT_MESSAGE" value="-" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/imports/graphql/modules/posts/expose.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/Supplies/Supplies.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="662">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-          <caret line="60" column="51" selection-start-line="60" selection-start-column="51" selection-end-line="60" selection-end-column="51" />
-          <caret line="75" column="23" selection-start-line="75" selection-start-column="23" selection-end-line="75" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/_main/routes/components/AdvancedRoute.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/imports/db/supplies/collection.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
@@ -735,16 +767,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/components/Navbar.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="16" column="46" lean-forward="true" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/components/Profile/ProfileGeneral.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
@@ -786,26 +808,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/SuppliesCreate.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="29" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/_main/routes/publicRoutes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="54" column="4" lean-forward="true" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
-          <folding>
-            <element signature="e#125#157#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/imports/graphql/entities/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
@@ -833,16 +835,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/Profile/ProfileDocuments.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="599">
-          <caret line="141" column="57" selection-start-line="141" selection-start-column="45" selection-end-line="141" selection-end-column="57" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/pages/Dashboard.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -857,23 +849,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/Profile/Profile.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="723">
-          <caret line="80" column="4" lean-forward="true" selection-start-line="80" selection-start-column="4" selection-end-line="80" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/components/MessageBox.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/styles/layout/_navbar.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1542">
@@ -881,22 +856,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/styles/pages/profile/_profile.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="307" column="10" selection-start-line="307" selection-start-column="10" selection-end-line="307" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/simpl-schema/dist/main.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/Profile/ProfileInbox.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="20" selection-start-line="20" selection-end-line="21" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/styles/_helpers/_variables.scss">
       <provider selected="true" editor-type-id="text-editor">
@@ -915,30 +876,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/Users/Users.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="96" column="22" selection-start-line="96" selection-start-column="22" selection-end-line="96" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/styles/pages/dashboard/_header.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="64" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/styles/pages/users/users.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="211" column="17" selection-start-line="211" selection-start-column="17" selection-end-line="211" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/pages/Documents/DocumentsCreate.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
@@ -949,10 +886,121 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/pages/_main/routes/publicRoutes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="38" column="27" selection-start-line="38" selection-start-column="15" selection-end-line="38" selection-end-column="27" />
+          <folding>
+            <element signature="e#125#157#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/styles/pages/dashboard/_header.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="56" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/styles/pages/users/users.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="216" selection-start-line="216" selection-end-line="216" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/pages/Users/Users.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="96" column="22" selection-start-line="96" selection-start-column="22" selection-end-line="96" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/Profile/SecondaryNav.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="38" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/MessageBox.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="55" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/pages/_main/routes/components/AdvancedRoute.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="31" column="29" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/Navbar.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="39" lean-forward="true" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/Wrapper.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="33" lean-forward="true" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/pages/Dashboard/Dashboard.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/pages/SuppliesCreate.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="29" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/pages/Profile/Profile.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="134" column="32" lean-forward="true" selection-start-line="134" selection-start-column="32" selection-end-line="134" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/pages/Documents/Documents.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="57" column="41" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
+        <state relative-caret-position="289">
+          <caret line="60" column="43" selection-start-line="60" selection-start-column="43" selection-end-line="60" selection-end-column="43" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -961,24 +1009,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/styles/pages/documents/_documents.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
+        <state relative-caret-position="268">
+          <caret line="52" column="21" lean-forward="true" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/Dashboard/Dashboard.jsx">
+    <entry file="file://$PROJECT_DIR$/client/pages/Profile/ProfileInbox.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-367">
-          <caret line="94" column="22" selection-start-line="94" selection-start-column="22" selection-end-line="94" selection-end-column="22" />
+        <state relative-caret-position="303">
+          <caret line="158" column="46" selection-start-line="158" selection-start-column="46" selection-end-line="158" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/styles/pages/profile/_profile.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="363" column="17" selection-start-line="363" selection-start-column="17" selection-end-line="363" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/components/Documents/DocumentsBox.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="28" column="4" lean-forward="true" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+        <state relative-caret-position="161">
+          <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/pages/Profile/ProfileDocuments.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="139" column="37" lean-forward="true" selection-start-line="139" selection-start-column="37" selection-end-line="139" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>

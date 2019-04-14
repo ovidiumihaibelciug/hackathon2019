@@ -35,6 +35,11 @@ export default [
     onlySecretar: 1,
   },
   {
+    path: '/profile/user/inbox',
+    component: ProfileInbox,
+    onlyStudent: 1,
+  },
+  {
     path: '/profile',
     component: Profile,
     onlyStudent: 1,
