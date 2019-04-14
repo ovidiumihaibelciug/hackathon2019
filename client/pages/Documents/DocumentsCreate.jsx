@@ -10,8 +10,7 @@ import draftToHtml from 'draftjs-to-html';
 import Navbar from "../../components/Navbar";
 import Wrapper from "../../components/Wrapper";
 import { proces_verbal } from '../../utils';
-
-
+import SignatureCanvas from 'react-signature-canvas';
 
 class PostCreate extends Component {
 
@@ -115,6 +114,21 @@ class PostCreate extends Component {
             onEditorStateChange={this.onEditorStateChange}
           />
           <AutoField name="type" placeholder="Enter your email address" />
+          <div className="cc-signature">
+            <div className="flex--helper cc-signature__row text--dark-blue">
+            </div>
+            <SignatureCanvas
+              ref={ref => {
+                this.sigPad = ref;
+              }}
+              penColor="#133d6b"
+              canvasProps={{
+                width: 630,
+                height: 200,
+                className: 'sigCanvas',
+              }}
+            />
+          </div>
           <Button type="primary" htmlType="submit">Submit</Button>
         </AutoForm>
       </div>

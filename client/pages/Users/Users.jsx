@@ -21,6 +21,7 @@ class Users extends Component {
   load = ({filters, options}) => {
     return db.users.find({
       _id: 1,
+      emails: 1,
       profile: {
         name: 1,
         classNumber: 1,
@@ -44,9 +45,11 @@ class Users extends Component {
   };
 
   onSubmit = (data) => {
+    console.log(data);
 
     db.users.find({
         _id: 1,
+        emails: 1,
         profile: {
           name: 1,
           classNumber: 1,
@@ -60,8 +63,8 @@ class Users extends Component {
         fetchPolicy: 'no-cache'
       }
     ).then(result => {
-      const newData = result.filter(item => item.profile.name.toLowerCase().includes(data.name.toLowerCase()));
-
+      const newData = result.filter(item => (data.name && item.profile.name.toLowerCase().includes(data.name.toLowerCase())) || (data.email && item.emails[0].address.toLowerCase().includes(data.email.toLowerCase())));
+      console.log(result);
       this.setState({
         isFiltering: true,
         filteredData: newData,
@@ -103,7 +106,7 @@ class Users extends Component {
             }
           </div>
           <div>
-            {!isFiltering && (
+            {!isFiltering ? (
               <div className="users">
                 <div className="users__items">
                   <EasyList>
@@ -129,10 +132,10 @@ class Users extends Component {
                   <EasyPager/>
                 </div>
               </div>
-            )}
+            ) : <div></div>}
           </div>
           {
-            isFiltering &&
+            isFiltering ? (
             <div className="users">
               <div className="users__items">
                 {
@@ -153,6 +156,7 @@ class Users extends Component {
                 }
               </div>
             </div>
+            ) : <div></div>
           }
         </Molecule>
       </Wrapper>
@@ -162,7 +166,12 @@ class Users extends Component {
 
 const FilterSchema = new SimpleSchema({
   name: {
-    type: String
+    type: String,
+    optional: true
+  },
+  email: {
+    type: String,
+    optional: true
   }
 });
 

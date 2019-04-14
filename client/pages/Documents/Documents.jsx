@@ -47,7 +47,7 @@ class Documents extends Component {
 
         <div className="documents">
           <div className="documents__button documents__button--left ">
-            <Button type="primary" outline ghost><Link to="/documents/create">Add supply</Link> </Button>
+            <Button type="primary" outline ghost><Link to="/documents/create">Add documents</Link> </Button>
           </div>
           <Molecule
             agents={{

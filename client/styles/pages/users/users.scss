@@ -135,3 +135,93 @@
 
   }
 }
+
+.cc-tooltip-icon {
+  display: inline-block;
+  font-size: 18px;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: #2B89CA;
+  text-align: center;
+  color: #ffffff;
+  padding-top: 3px;
+  margin-left: 10px;
+  cursor: pointer;
+
+  &__select {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #2B89CA;
+    text-align: center;
+    color: #ffffff;
+    margin-left: 10px;
+
+    position: absolute;
+    top: 16px;
+    right: -50px;
+
+    span {
+      cursor: default;
+      padding-top: 4px;
+      display: block;
+    }
+  }
+}
+
+#my-signature {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  border-radius: 4px;
+  border: 0;
+  .row-block {
+    font-size: 16px;
+    line-height: 18px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 15;
+    .text {
+      color: #5e5d5d;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    .btnClear {
+      color: #e96262;
+      cursor: pointer;
+    }
+  }
+}
+
+.cc-signature {
+  max-width: 400px;
+  height: 300px;
+  margin: 30px 0;
+  z-index: 14;
+  background: white;
+  border: 2px #0575E6 solid;
+  border-radius: 15px;
+
+  &__clear {
+    text-transform: uppercase;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+}

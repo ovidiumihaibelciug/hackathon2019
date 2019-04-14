@@ -10,7 +10,7 @@
     }
   }
   &__item {
-    min-height: 200px;
+    min-height: 270px;
     min-width: 400px;
     margin-bottom: 30px;
   }
@@ -100,4 +100,16 @@
   margin: 0 5%;
   margin-top: 100px;
   padding: 15px;
+}
+
+.documents__modal {
+  margin-top: -100px;
+  .ant-modal-body {
+    height: 700px !important;
+    width: 100% !important;
+  }
+  &__object {
+    height: 700px !important;
+    width: 100%;
+  }
 }
