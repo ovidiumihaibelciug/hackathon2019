@@ -5,6 +5,7 @@ import Header from "../../components/Header";
 import {Card, Table} from 'antd';
 import {Line} from 'react-chartjs-2';
 import Box from '../../components/Dashboard/Box'
+import Loading from '../../components/Loading';
 
 class Dashboard extends Component {
   render() {
@@ -103,6 +104,9 @@ class Dashboard extends Component {
         number: '20'
       },
     ];
+    if (!Meteor.user()) {
+      return <Loading />;
+    }
 
     return (
       <Wrapper className="dashboard">

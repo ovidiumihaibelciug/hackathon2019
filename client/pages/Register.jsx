@@ -24,7 +24,7 @@ class Register extends React.Component {
       if (userRole === 'STUDENT') {
         history.push(`/complete-info/${id}`);
       }  else if (userRole === 'SECRETAR') {
-        history.push('/dashboard');
+        history.push('/profile');
       }
       notification.open({
         message: 'Log in successful',
@@ -54,8 +54,10 @@ class Register extends React.Component {
               </div>
               <AutoField name='email' placeholder="Enter your email address" label={"Enter your email"} />
               <AutoField name='password' placeholder="Password" label={"Password"} type='password' />
-              <AutoField name='role' placeholder="Password" label={"Student or Secretar"} />
-              <Button type="primary" htmlType="submit">Login</Button>
+              <AutoField name='role' placeholder="Password" label={"Secretar"} />
+              <Button type="primary" htmlType="submit">Register</Button>
+              <br/>
+              <br/>
               <a href="/forgot-password">Forgot password?</a>
 
               <ErrorField name="name" />

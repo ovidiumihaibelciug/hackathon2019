@@ -19,6 +19,9 @@ class SecondaryNav extends Component {
           <div className="secondary__navbar__item">
             <NavLink to={!isSecretar ? '/profile/user/inbox' : `/profile/user/inbox`} exact activeClassName={'secondary__navbar__item--active'}>Inbox</NavLink>
           </div>
+          <div className="secondary__navbar__item">
+            <NavLink to={'/grades'} exact activeClassName={'secondary__navbar__item--active'}>Note</NavLink>
+          </div>
         </div>
       </div>
     );

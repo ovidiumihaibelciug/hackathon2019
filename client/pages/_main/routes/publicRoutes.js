@@ -80,6 +80,7 @@ export default [
   {
     path: '/documents',
     component: Documents,
+    onlySecretar: 1,
   },
   {
     path: '/documents/create',

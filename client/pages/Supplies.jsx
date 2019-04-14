@@ -121,7 +121,7 @@ class Supplies extends Component {
                   <div className="supplies__items">
                     <EasyList>
                       {({data, loading, molecule}) => {
-                        return data.map(item => <SupplyBox className="supplies__item" {...item} />);
+                        return data.map((item, id) => <SupplyBox className="supplies__item" id={id} {...item} />);
                       }}
                     </EasyList>
                   </div>

@@ -1,16 +1,16 @@
 import React, {Component} from 'react';
 import SimpleSchema from "simpl-schema";
-import { AutoForm, AutoField, ErrorField } from 'uniforms-antd';
+import {AutoField, AutoForm} from 'uniforms-antd';
 import db from 'apollo-morpher';
-import { Button } from 'antd';
-import { Editor } from 'react-draft-wysiwyg';
+import {Button} from 'antd';
+import {Editor} from 'react-draft-wysiwyg';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
-import { convertToRaw, EditorState, ContentState, convertFromHTML } from 'draft-js';
+import {ContentState, convertFromHTML, convertToRaw, EditorState} from 'draft-js';
 import draftToHtml from 'draftjs-to-html';
 import Navbar from "../../components/Navbar";
-import Wrapper from "../../components/Wrapper";
-import { proces_verbal } from '../../utils';
+import {proces_verbal} from '../../utils';
 import SignatureCanvas from 'react-signature-canvas';
+import notification from "antd/lib/notification";
 
 class PostCreate extends Component {
 
@@ -35,8 +35,8 @@ class PostCreate extends Component {
         'Content-Type': 'application/json',
         'Authorization': 'e29b6016-6dbc-4923-b5e3-fce65b76cd8f' //Get your API key from https://portal.api2pdf.com
       },
-      body: JSON.stringify({html: `<p>${markup}</p>`, inlinePdf: true, fileName: 'test.pdf' })
-    }).then(res=> res.json())
+      body: JSON.stringify({html: `<p>${markup}</p>`, inlinePdf: true, fileName: 'test.pdf'})
+    }).then(res => res.json())
       .then(res => {
         this.setState({
           pdf: res.pdf
@@ -51,9 +51,12 @@ class PostCreate extends Component {
 
     db.documents.insert(newData)
       .then(id => {
+        const { history } = this.props;
         if (id) {
-          console.log(id);
-          //do smth
+          notification.open({
+            message: 'Document created',
+          });
+          history.push('/documents');
         } else {
           // error
         }
@@ -79,58 +82,72 @@ class PostCreate extends Component {
   };
 
   render() {
-    const { type, editorState } = this.state;
+    const {type, editorState} = this.state;
     if (!type) {
       return (
         <div>
-          <Navbar className="navbar__white" />
-
+          <Navbar className="navbar__white"/>
           <div className="documents__create__types">
-            <div className="documents__create__type box" onClick={() => this.handleType(1)}>
-              Proces verbal
-            </div>
-            <div className="documents__create__type box" onClick={() => this.handleType(2)}>
-              Adeverinta elev
-            </div>
-            <div className="documents__create__type box" onClick={() => this.handleType(2)}>
-              Sedinta
+
+            <div className="container">
+              <div className="box" onClick={() => this.handleType(1)}>
+                <div className="content">
+                  <h2>01</h2>
+                  <h3>Proces verbal</h3>
+                </div>
+              </div>
+              <div className="box" onClick={() => this.handleType(2)}>
+                <div className="content">
+                  <h2>02</h2>
+                  <h3>Adeverinta</h3>
+                </div>
+              </div>
+              <div className="box" onClick={() => this.handleType(2)}>
+                <div className="content">
+                  <h2>03</h2>
+                  <h3>Service one</h3>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+
       )
     }
     return (
       <div>
-        <Navbar className="navbar__white" />
+        <Navbar className="navbar__white"/>
 
-        <AutoForm schema={DocumentSchema} onSubmit={this.onSubmit}>
-          <AutoField name="title" placeholder="Enter your email address" />
+        <div className="documents__form box">
+          <AutoForm schema={DocumentSchema} onSubmit={this.onSubmit}>
+            <AutoField name="title" placeholder="Enter your email address"/>
 
-          <Editor
-            editorState={editorState}
-            toolbarClassName="toolbarClassName"
-            wrapperClassName="wrapperClassName"
-            editorClassName="editorClassName"
-            onEditorStateChange={this.onEditorStateChange}
-          />
-          <AutoField name="type" placeholder="Enter your email address" />
-          <div className="cc-signature">
-            <div className="flex--helper cc-signature__row text--dark-blue">
-            </div>
-            <SignatureCanvas
-              ref={ref => {
-                this.sigPad = ref;
-              }}
-              penColor="#133d6b"
-              canvasProps={{
-                width: 630,
-                height: 200,
-                className: 'sigCanvas',
-              }}
+            <Editor
+              editorState={editorState}
+              toolbarClassName="toolbarClassName"
+              wrapperClassName="wrapperClassName"
+              editorClassName="editorClassName"
+              onEditorStateChange={this.onEditorStateChange}
             />
-          </div>
-          <Button type="primary" htmlType="submit">Submit</Button>
-        </AutoForm>
+            <AutoField name="type" placeholder="Enter your email address"/>
+            <div className="cc-signature">
+              <div className="flex--helper cc-signature__row text--dark-blue">
+              </div>
+              <SignatureCanvas
+                ref={ref => {
+                  this.sigPad = ref;
+                }}
+                penColor="#133d6b"
+                canvasProps={{
+                  width: 630,
+                  height: 200,
+                  className: 'sigCanvas',
+                }}
+              />
+            </div>
+            <Button type="primary" htmlType="submit">Submit</Button>
+          </AutoForm>
+        </div>
       </div>
     );
   }
@@ -140,7 +157,7 @@ const DocumentSchema = new SimpleSchema({
   title: {
     type: String,
   },
-  type: { type: String },
+  type: {type: String},
 });
 
 export default PostCreate;

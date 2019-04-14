@@ -16,8 +16,13 @@ export default class Security {
       throw new Error('not-authorized');
     }
   }
-  static checkStaff(userId) {
-    if (!this.hasRole(userId, 'STAFF')) {
+  static checkSecretar(userId) {
+    if (!this.hasRole(userId, 'SECRETAR')) {
+      throw new Error('not-authorized');
+    }
+  }
+  static checkStudent(userId) {
+    if (!this.hasRole(userId, 'STUDENT')) {
       throw new Error('not-authorized');
     }
   }

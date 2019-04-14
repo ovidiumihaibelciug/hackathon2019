@@ -8,6 +8,7 @@ import {Link} from "react-router-dom";
 import SimpleSchema from "simpl-schema";
 import {AutoForm} from "uniforms-antd";
 import {Card} from 'antd';
+import ScrollAnimation from "react-animate-on-scroll";
 
 
 class Users extends Component {
@@ -112,9 +113,10 @@ class Users extends Component {
                   <EasyList>
                     {({data, loading, molecule}) => {
                       if (loading) return null;
-                      return data.map(item => {
+                      return data.map((item, id) => {
                         let img = 'http://www.phspotasky.com/uploads/2/4/9/2/24928880/cp2_orig.jpg';
                         return (<Link to={`/profile/${item._id}`}>
+                          <ScrollAnimation animateIn="fadeIn" delay={id * 150}>
                           <div className="users-item box">
                             <div className="users-item__image-section">
                               <div className="users-item__image" style={{backgroundImage: `url(${img})`}}></div>
@@ -123,6 +125,7 @@ class Users extends Component {
                             <div
                               className="users-item__class">{item.profile.classNumber}{item.profile.classLetter}</div>
                           </div>
+                          </ScrollAnimation>
                         </Link>)
                       })
                     }}
@@ -139,10 +142,12 @@ class Users extends Component {
             <div className="users">
               <div className="users__items">
                 {
-                  filteredData.map(item => {
+                  filteredData.map((item, id) => {
                     let img = 'http://www.phspotasky.com/uploads/2/4/9/2/24928880/cp2_orig.jpg';
                     return (
                       <Link to={`/profile/${item._id}`}>
+                        <ScrollAnimation animateIn="fadeIn" delay={id * 150}>
+
                         <div className="users-item box">
                           <div className="users-item__image-section">
                             <div className="users-item__image" style={{backgroundImage: `url(${img})`}}></div>
@@ -150,6 +155,7 @@ class Users extends Component {
                           <div className="users-item__fullname">{item.profile.name}</div>
                           <div className="users-item__class">{item.profile.classNumber}{item.profile.classLetter}</div>
                         </div>
+                        </ScrollAnimation>
                       </Link>
                     )
                   })
